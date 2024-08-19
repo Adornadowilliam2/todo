@@ -1,26 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="check-list.png" type="image/x-icon">
-</head>
-<body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #077bff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .todo-app {
+        width: max-content;
+        height: max-content;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #fff;
+        position: relative;
+      }
+
+      .todo-app h2 {
+        color: #002765;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .todo-app img {
+        width: 50px;
+        margin: 10px;
+      }
+
+      .row {
+        display: flex;
+
+        align-items: center;
+      }
+
+      .row input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      .row button {
+        background-color: orangered;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        box-shadow: 0 10px 10px black;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      ul li {
+        margin-left: 20px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      ul li input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .clear-btn {
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <link rel="shortcut icon" href="check-list.png" type="image/x-icon" />
+  </head>
+  <body>
     <div class="todo-app">
-        <h2>To do List <img src="check-list.png" alt="logo"></h2>
-        <div class="row">
-            <input type="text" placeholder="Add something.." required id="input-box">
-            <button id="task" onclick="AddTask()">Add</button>
-        </div>
-        <ul id="list-container">
-            <!-- <li>Lorem ipsum dolor sit.</li>
-            <li>Fugiat rem perferendis praesentium!</li>
-            <li>Vero suscipit placeat officiis?</li>
-            <li>Quidem laudantium possimus similique.</li> -->
-        </ul>
+      <h2>To do List <img src="check-list.png" alt="logo" /></h2>
+      <div class="row">
+        <input
+          type="text"
+          placeholder="Add something.."
+          required
+          id="input-box"
+        />
+        <button id="task" onclick="AddTask()">Add</button>
+      </div>
+      <ul id="list-container">
+        <!-- <li>Lorem ipsum dolor sit amet.</li>
+        <li>Sapiente itaque cumque doloremque eveniet.</li>
+        <li>Maxime enim culpa laboriosam rem!</li>
+        <li>Officiis maxime ducimus quas at!</li>
+        <li>Aliquid ipsum odio doloribus id!</li> -->
+      </ul>
     </div>
-</body>
+  </body>
 </html>
-<script src="script.js"></script>
