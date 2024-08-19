@@ -56,13 +56,34 @@ body{
     border: none;
     box-shadow: 0 10px 10px black;
 }
-ul li {
-    margin-left: 20px;
-    margin-bottom: 5px;
-    list-style-type: circle;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    
-}
+ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
+      ul li {
+        margin-left: 20px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      ul li input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .clear-btn {
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
